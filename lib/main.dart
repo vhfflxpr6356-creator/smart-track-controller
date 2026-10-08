@@ -857,9 +857,9 @@ class _TrafficLightPageState extends State<TrafficLightPage>
               const SizedBox(height: 12),
               Row(
                 children: [
-                  _obstacleDirectionButton('← 왼쪽\n보드 쪽', 'B20'),
-                  const SizedBox(width: 10),
                   _obstacleDirectionButton('오른쪽 →\n보드 반대쪽', 'B21'),
+                  const SizedBox(width: 10),
+                  _obstacleDirectionButton('← 왼쪽\n보드 쪽', 'B20'),
                 ],
               ),
               const SizedBox(height: 8),
