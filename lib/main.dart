@@ -864,15 +864,6 @@ class _TrafficLightPageState extends State<TrafficLightPage>
               ),
               const SizedBox(height: 8),
               const Text('좌우 버튼은 누르는 동안 이동하고, 손을 떼면 정지합니다.'),
-              const SizedBox(height: 12),
-              FilledButton.icon(
-                style: FilledButton.styleFrom(backgroundColor: Colors.red),
-                onPressed: _isObstacleConnected && _obstacleV2
-                    ? _stopObstacle
-                    : null,
-                icon: const Icon(Icons.stop),
-                label: const Text('정지'),
-              ),
             ],
           ),
         ),
