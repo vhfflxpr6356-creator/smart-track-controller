@@ -74,8 +74,8 @@ void main() {
       tester,
       'V2\nSTATE:STOP LEFT:0 RIGHT:0 READY:0 REASON:boot\n',
     );
-    await tester.ensureVisible(find.text('← 왼쪽\n보드 쪽'));
-    await tester.tap(find.text('← 왼쪽\n보드 쪽'));
+    await tester.ensureVisible(find.text('오른쪽 →\n보드 쪽'));
+    await tester.tap(find.text('오른쪽 →\n보드 쪽'));
     await tester.pump();
     expect(writes.where((s) => s == 'B20' || s == 'B10'), isEmpty);
     await dispose(tester);
@@ -89,9 +89,9 @@ void main() {
       tester,
       'FW:OBSTACLE_V2\nSTATE:STOP LEFT:0 RIGHT:0 READY:1 REASON:boot\n',
     );
-    await tester.ensureVisible(find.text('← 왼쪽\n보드 쪽'));
+    await tester.ensureVisible(find.text('오른쪽 →\n보드 쪽'));
     final gesture = await tester.startGesture(
-      tester.getCenter(find.text('← 왼쪽\n보드 쪽')),
+      tester.getCenter(find.text('오른쪽 →\n보드 쪽')),
     );
     await tester.pump(const Duration(milliseconds: 450));
     expect(writes.where((s) => s == 'B20').length, greaterThanOrEqualTo(3));
